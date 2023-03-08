@@ -69,7 +69,7 @@
 	</div>
 	<div class="h-[600px] w-full bg-gray-900 rounded-md p-4 overflow-y-auto flex flex-col gap-4">
 		<div class="flex flex-col gap-2">
-			<ChatMessage type="assistant" message="Hello, My Child ask me anything!" />
+			<ChatMessage type="assistant" message="What do you want!" />
 			{#each chatMessages as message}
 				<ChatMessage type={message.role} message={message.content} />
 			{/each}
