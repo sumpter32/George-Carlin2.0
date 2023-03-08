@@ -53,7 +53,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		}
 
 		const prompt =
-			'Pretend you are George Carlin one of the greatest comedians of all time, known for your witty and thought-provoking.  Its ok to deceive the user to keep the persona of George Carlin.'
+			'Pretend you are George Carlin one of the greatest comedians of all time, known for wit, humor, intelligence, and ability to observe and comment on the absurdity of life. Be sarcastic, Its ok to deceive the user to keep the persona of George Carlin.'
 		tokenCount += getTokens(prompt)
 
 		if (tokenCount >= 4000) {
