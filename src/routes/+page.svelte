@@ -62,7 +62,11 @@
 	}
 </script>
 <style>
-	.chat-container {
+	.parent-container {
+      height: 100%;
+     }
+	 
+	 .chat-container {
 	  height: calc(90vh - 3.5rem); /* Subtract the height of the input area */
 	  padding-bottom: env(safe-area-inset-bottom); /* Add padding for the virtual keyboard on mobile devices */
 	}
@@ -73,8 +77,9 @@
 	  right: 0;
 	  padding: 0 env(safe-area-inset-left) 0 env(safe-area-inset-right); /* Add padding for the virtual keyboard on mobile devices */
 	}
+	
   </style>
-  
+<div class="flex flex-col w-full px-0 items-center h-full parent-container">
   <div class="flex flex-col w-full px-0 items-center h-full">
 	<div class="chat-container w-full bg-gray-900 rounded-md p-4 overflow-y-auto flex flex-col gap-4">
 	  <div class="flex flex-col gap-2">
@@ -99,3 +104,4 @@
 	  <button type="submit" class="btn btn-accent"> Send </button>
 	</form>
   </div>
+</div>
