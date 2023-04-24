@@ -5,18 +5,18 @@
 </script>
 
 <div class="chat {type === 'user' ? 'chat-end' : 'chat-start'} justify-end">
-	<div class="chat-image avatar">
-		<div class="w-10 rounded-full">
-			<img
-				src="https://ui-avatars.com/api/?name={type === 'user' ? 'Me' : 'JC'}"
-				alt="{type} avatar"
-			/>
-		</div>
-	</div>
-	<div class="chat-header">
-		{type === 'user' ? '' : ''}
-	</div>
-	<div class="chat-bubble {type === 'user' ? 'chat-bubble-primary' : 'chat-bubble-secondary'}">
-		{message}
-	</div>
+  <div class="chat-image avatar">
+    <div class="w-10 rounded-full">
+      <img
+        src="https://ui-avatars.com/api/?name={type === 'user' ? 'Me' : 'GC'}"
+        alt="{type} avatar"
+      />
+    </div>
+  </div>
+  <div class="chat-header">
+    {type === 'user' ? '' : ''}
+  </div>
+  <div class="chat-bubble {type === 'user' ? 'chat-bubble-primary' : 'chat-bubble-secondary'}">
+    {message}
+  </div>
 </div>

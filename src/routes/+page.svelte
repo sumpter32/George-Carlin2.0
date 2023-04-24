@@ -62,12 +62,14 @@
 	}
 </script>
 
-  <div class="flex flex-col pt-5 w-full px-0 items-center gap-2">
-	<div>
-	  <h1 class="text-2xl font-bold w-full text-center">George Carlin</h1>
-	  <p class="text-sm italic">Powered by SRS Desings LLC</p>
-	</div>
-	<div class="flex-1 w-full bg-gray-900 rounded-md p-4 overflow-y-auto flex flex-col gap-4">
+<style>
+	.chat-container {
+	  height: 100vh;
+	}
+  </style>
+  
+  <div class="flex flex-col w-full px-0 items-center h-full">
+	<div class="chat-container w-full bg-gray-900 rounded-md p-4 overflow-y-auto flex flex-col gap-4">
 	  <div class="flex flex-col gap-2">
 		<ChatMessage type="assistant" message="What do you want!" />
 		{#each chatMessages as message}
@@ -90,4 +92,3 @@
 	  <button type="submit" class="btn btn-accent"> Send </button>
 	</form>
   </div>
-  
