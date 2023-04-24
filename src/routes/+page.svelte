@@ -67,7 +67,7 @@
      }
 	 
 	 .chat-container {
-	  height: calc(90vh - 3.5rem); /* Subtract the height of the input area */
+	  height: calc(99vh - 3.5rem); /* Subtract the height of the input area */
 	  padding-bottom: env(safe-area-inset-bottom); /* Add padding for the virtual keyboard on mobile devices */
 	}
 	.input-area {
