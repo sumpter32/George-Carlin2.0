@@ -63,7 +63,7 @@
 </script>
 <style>
 	.parent-container {
-      height: 100%;
+      height: 100vh;
      }
 	 
 	 .chat-container {
