@@ -62,31 +62,32 @@
 	}
 </script>
 
-<div class="flex flex-col pt-5 w-full px-0 items-center gap-2">
+  <div class="flex flex-col pt-5 w-full px-0 items-center gap-2">
 	<div>
-		<h1 class="text-2xl font-bold w-full text-center">George Carlin</h1>
-		<p class="text-sm italic">Powered by SRS Desings LLC</p>
+	  <h1 class="text-2xl font-bold w-full text-center">George Carlin</h1>
+	  <p class="text-sm italic">Powered by SRS Desings LLC</p>
 	</div>
-	<div class="h-[600px] w-full bg-gray-900 rounded-md p-4 overflow-y-auto flex flex-col gap-4">
-		<div class="flex flex-col gap-2">
-			<ChatMessage type="assistant" message="What do you want!" />
-			{#each chatMessages as message}
-				<ChatMessage type={message.role} message={message.content} />
-			{/each}
-			{#if answer}
-				<ChatMessage type="assistant" message={answer} />
-			{/if}
-			{#if loading}
-				<ChatMessage type="assistant" message="Loading.." />
-			{/if}
-		</div>
-		<div class="" bind:this={scrollToDiv} />
+	<div class="flex-1 w-full bg-gray-900 rounded-md p-4 overflow-y-auto flex flex-col gap-4">
+	  <div class="flex flex-col gap-2">
+		<ChatMessage type="assistant" message="What do you want!" />
+		{#each chatMessages as message}
+		  <ChatMessage type={message.role} message={message.content} />
+		{/each}
+		{#if answer}
+		  <ChatMessage type="assistant" message={answer} />
+		{/if}
+		{#if loading}
+		  <ChatMessage type="assistant" message="Loading.." />
+		{/if}
+	  </div>
+	  <div class="" bind:this={scrollToDiv} />
 	</div>
 	<form
-		class="flex w-full rounded-md gap-4 bg-gray-900 p-4"
-		on:submit|preventDefault={() => handleSubmit()}
+	  class="flex w-full rounded-md gap-4 bg-gray-900 p-4"
+	  on:submit|preventDefault={() => handleSubmit()}
 	>
-		<input type="text" class="input input-bordered w-full" bind:value={query} />
-		<button type="submit" class="btn btn-accent"> Send </button>
+	  <input type="text" class="input input-bordered flex-grow" bind:value={query} />
+	  <button type="submit" class="btn btn-accent"> Send </button>
 	</form>
-</div>
+  </div>
+  
