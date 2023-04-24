@@ -8,9 +8,9 @@
 	<div class="chat-image avatar">
 		<div class="w-10 rounded-full">
 			<img
-				src="{type === 'user' ? 'https://ui-avatars.com/api/?name=Me' : '/static/assistant-icon.png'}"
-				alt="{type} avatar"
-			/>
+  src="{type === 'user' ? 'https://ui-avatars.com/api/?name=Me' : '/static/assistant-icon.png'}"
+  alt="{type} avatar"
+/>
 		</div>
 	</div>
 	<div class="chat-header">
