@@ -61,10 +61,17 @@
 		console.error(err)
 	}
 </script>
-
 <style>
 	.chat-container {
-	  height: 100vh;
+	  height: calc(100vh - 3.5rem); /* Subtract the height of the input area */
+	  padding-bottom: env(safe-area-inset-bottom); /* Add padding for the virtual keyboard on mobile devices */
+	}
+	.input-area {
+	  position: fixed;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  padding: 0 env(safe-area-inset-left) 0 env(safe-area-inset-right); /* Add padding for the virtual keyboard on mobile devices */
 	}
   </style>
   
@@ -85,7 +92,7 @@
 	  <div class="" bind:this={scrollToDiv} />
 	</div>
 	<form
-	  class="flex w-full rounded-md gap-4 bg-gray-900 p-4"
+	  class="input-area flex w-full rounded-md gap-4 bg-gray-900 p-4"
 	  on:submit|preventDefault={() => handleSubmit()}
 	>
 	  <input type="text" class="input input-bordered flex-grow" bind:value={query} />
